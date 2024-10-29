@@ -6,7 +6,7 @@ public class Semaforo {
     }
 
     synchronized public void P(){
-        while(valore == 0){             // semaforo rosso
+        if(valore == 0){             // semaforo rosso
             try {
                 wait();                 // il thread si sospende
             }catch (Exception e){}
